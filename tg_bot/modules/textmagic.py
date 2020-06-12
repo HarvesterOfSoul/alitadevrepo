@@ -28,8 +28,6 @@ def weebify(bot: Bot, update: Update, args: List[str]):
 
 
 __help__ = """
- Originally Made By [Ayan Ansari](t.me/TechnoAyanOfficial)
- 
  - /blackout <text>: Apply Blackout Style to your text
  """
 
