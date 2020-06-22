@@ -34,7 +34,7 @@ __help__ = """
  - /neko - Do a paste at `neko.bin`
 """
 
-PASTE_HANDLER = DisableAbleCommandHandler("neko", neko, pass_args=True)
+neko_HANDLER = DisableAbleCommandHandler("neko", neko, pass_args=True)
 dispatcher.add_handler(neko_HANDLER)
 
 __mod_name__ = "Paste"
