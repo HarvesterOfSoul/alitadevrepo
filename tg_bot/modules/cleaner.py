@@ -146,7 +146,6 @@ def add_bluetext_ignore_global(bot: Bot, update: Update, args: List[str]):
 
 
 @run_async
-@dev_plus
 def remove_bluetext_ignore_global(bot: Bot, update: Update, args: List[str]):
 
     message = update.effective_message
