@@ -170,3 +170,27 @@ def user_not_admin(func):
             return func(bot, update, *args, **kwargs)
 
     return is_not_admin
+
+def connection_status(func):
+    @wraps(func)
+    def connected_status(bot: Bot, update: Update, *args, **kwargs):
+        conn = connected(bot, update, update.effective_chat, update.effective_user.id, need_admin=False)
+
+        if conn:
+            chat = dispatcher.bot.getChat(conn)
+            update.__setattr__("_effective_chat", chat)
+            return func(bot, update, *args, **kwargs)
+        else:
+            if update.effective_message.chat.type == "private":
+                update.effective_message.reply_text("Send /connect in a group that you and I have in common first.")
+                return connected_status
+
+            return func(bot, update, *args, **kwargs)
+
+    return connected_status
+
+
+# Workaround for circular import with connection.py
+from tg_bot.modules import connection
+
+connected = connection.connected
