@@ -27,9 +27,13 @@ def escape_html(word):
     return escape(word)
 
 PM_START_TEXT = """
-
-.                    
-Hello *{}* My name is *Alita*!
+╲╭━<━━╮╲╲ 
+╲┃╭╮╭╮┃╲╲ 
+┗┫┏━━┓┣┛╲ 
+╲┃╰━━╯┃ ╲ 
+╲╰┳━━┳╯╲╲ 
+╲╲┛╲╲┗╲╲╲                
+Hello *{}* My name is *Veronica*!
 
 I'm here to manage your groups! 
 
@@ -44,12 +48,6 @@ Want me to help you? [Click Here!](https://t.me/testbot101001023bot?startgroup=t
 
 
 HELP_STRINGS = """
-╲╭━<━━╮╲╲ 
-╲┃╭╮╭╮┃╲╲ 
-┗┫┏━━┓┣┛╲ 
-╲┃╰━━╯┃ ╲ 
-╲╰┳━━┳╯╲╲ 
-╲╲┛╲╲┗╲╲╲
 Hello! my name *{}*.
 
 *Main* available commands:
@@ -64,7 +62,7 @@ Hello! my name *{}*.
 And the following:
 """.format(dispatcher.bot.first_name, "" if not ALLOW_EXCL else "\nAll of the following commands  / or ! can  be used...\n")
 
-DONATE_STRING = """Hey you can Donate to [Witcher](t.me/TaggingTheWitcher) for better server """
+DONATE_STRING = """Hey you can Donate to [HailDevil](t.me/konnichiwaNoOne) for better server """
 
 
 IMPORTED = {}
